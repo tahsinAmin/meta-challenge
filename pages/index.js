@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Login from "../components/Login";
+import Messages from "../components/Messages";
 import Header from "../components/Header";
 import { useMoralis } from "react-moralis";
 
 export default function Home() {
-  const { isAuthenticated, logout } = useMoralis();
+  const { isAuthenticated } = useMoralis();
 
   if (!isAuthenticated) return <Login />;
 
@@ -15,12 +16,14 @@ export default function Home() {
       </Head>
       <div className='max-w-screen-2xl mx-auto'>
         <Header />
+        <Messages />
         {/* Messages */}
       </div>
-
-      <button onClick={logout}>Logout</button>
     </div>
   );
 }
 
-// https://youtu.be/oE8FxN49Wo8?t=235
+// It's all under the protection block that is usedfor authenticaation. So, we know the user will
+// be there. And he can safely use information about the user.
+
+//https://youtu.be/oE8FxN49Wo8?t=2713
