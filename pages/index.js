@@ -26,4 +26,4 @@ export default function Home() {
 // It's all under the protection block that is usedfor authenticaation. So, we know the user will
 // be there. And he can safely use information about the user.
 
-// https://youtu.be/oE8FxN49Wo8?t=4913
+// https://youtu.be/oE8FxN49Wo8?t=5301
